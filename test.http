@@ -1,0 +1,120 @@
+@url = http://localhost:3000/api
+@json = Content-Type: application/json
+###
+get {{url}}
+{{json}}
+
+###查询用户接口
+get {{url}}/users
+
+### 注册
+post {{url}}/register
+{{json}}
+
+{
+  "username":"user312",
+  "password":"123456",
+  "email":"1360967095@qq.com",
+  "sex":"wwwew",
+  "register_time":"2020-01-12",
+  "phone":"13480333124" 
+}
+
+### 登录
+post {{url}}/login
+{{json}}
+
+{
+  "username":"user32",
+  "password":"123456"
+}
+###
+get {{url}}/articleDetails
+{{json}}
+
+{
+  "id":"5e76e7cd7d7df91814a39f30"
+}
+###个人信息
+get {{url}}/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNjY1N2RkOGY1YzJkMTRiOGMyYjU0NSIsImlhdCI6MTU4Mzc2Njc2NX0.1I9maXvWTuXMMVJ2tp_yez-qXmYh_kFR0LVw9gdYWFY
+
+###添加文章
+post {{url}}/addArticle
+{{json}}
+
+{
+    "title": "草根2123寻梦",
+    "content": "程序搭建的本模板来自杨程序搭建的本模板来自杨程序搭建的本模板来自杨程序搭建的本模板来自杨程序搭建的本模板来自杨青个博客的自杨青个",
+    "image": "show3.jpg",
+    "time": "2020-3-22 10:10:59",
+    "author":" 作者",
+    "views":" 1222",
+    "comment_count":"231",
+    "sort_id": "qqqwq",
+    "label_id":"qweqw2"
+}
+
+###查询文章列表
+get {{url}}/articles
+{{json}}
+
+###更新文章
+put {{url}}/updateArticle
+{{json}}
+
+{
+  {
+    "article_id":"2",
+      "title": "测试2014草根寻梦本模板来自杨青个博客的(2014草根寻梦",
+      "content": "本模板动，同样也是基于帝国CMS开源程序搭建的本模板来自杨青个博客的(2014草根寻梦本模板来自杨青个本模板来自杨青个博客的(2014草根寻梦本模板来自杨青个",
+      "image": "show2.jpg",
+      "time": "2020-02-05",
+      "author":" 作者2222223",
+      "views":" 1232",
+      "comment_count":"2323231",
+      "sort_id": "2321",
+      "label_id":"2322"
+  }
+}
+###添加分类
+post {{url}}/addSort
+{{json}}
+
+{
+"name":"123111",
+"description":"123123"
+}
+
+###查看分类
+get {{ url }}/sort
+{{ json }}
+
+###添加标签
+post {{url}}/addLabel
+{{json}}
+
+{
+"name":"日志1",
+"description":"时刻分享"
+}
+
+###查看标签
+get {{ url }}/label
+{{ json }}
+
+###查看留言
+
+get {{ url }}/leaveMessage
+{{json}}
+
+###添加留言
+post {{ url }}/addLM
+{{ json}}
+
+{
+  "createTime":"2020-04-01 12:02:23",
+  "content":"测试111",
+  "name":"方晓龙111111",
+  "Iurl":"aaaaaaaaaaaa"
+}
