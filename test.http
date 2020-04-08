@@ -29,11 +29,11 @@ post {{url}}/login
   "password":"123456"
 }
 ###
-get {{url}}/articleDetails
+post {{url}}/articleDetails
 {{json}}
 
 {
-  "id":"5e76e7cd7d7df91814a39f30"
+  "id":"5e8403e85dc78f23a086180b"
 }
 ###个人信息
 get {{url}}/profile
@@ -44,8 +44,9 @@ post {{url}}/addArticle
 {{json}}
 
 {
-    "title": "草根2123寻梦",
-    "content": "程序搭建的本模板来自杨程序搭建的本模板来自杨程序搭建的本模板来自杨程序搭建的本模板来自杨程序搭建的本模板来自杨青个博客的自杨青个",
+    "title": "方晓龙测试1",
+    "content": "018年末，回首今年，感觉整个圈子的气氛是惨不忍睹的。昔日的大佬，昔日的老板大土豪，在这个寒冬渐渐的败落。有些人在死撑自己的信誉，苦死也撑着，这些人是我所以尊重、仰慕、崇拜的。然而也些人不是，借着这个寒冬，他们打破了底线，当起了老赖（这里没有双引号，是真正的老赖）。
+              2018",
     "image": "show3.jpg",
     "time": "2020-3-22 10:10:59",
     "author":" 作者",
@@ -116,5 +117,5 @@ post {{ url }}/addLM
   "createTime":"2020-04-01 12:02:23",
   "content":"测试111",
   "name":"方晓龙111111",
-  "Iurl":"aaaaaaaaaaaa"
+  "Iurl":"1"
 }

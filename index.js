@@ -89,16 +89,15 @@ app.get('/api/articles', async (req, res) => {
 // 添加文章
 app.post('/api/addArticle', async (req, res) => {
   const article = await Article.create({
-    // article_id:req.body.article_id,
     title: req.body.title,
     content: req.body.content,
-    image: req.body.image,
+    Image: req.body.image,
     time: req.body.time,
     author: req.body.author,
     views: req.body.views,
-    comment_count:req.body.comment_count,
-    sort_id: req.body.sort_id,
-    label_id:req.body.label_id
+    count:req.body.count,
+    sort: req.body.sort,
+    label:req.body.label
   })
   res.send(article)
 })
