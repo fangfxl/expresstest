@@ -48,14 +48,26 @@ const commentSchema = new mongoose.Schema({
   article_id:{type:String},
   comment_like_count:{type:Number},
   time:{type:Date},
-  content:{type:String}
+  content:{type:String},
+  replay:[
+    {
+      name:{type:String},
+      test:{type:String}
+    }
+  ]
 })
 //留言表
 const leaveMessageSchema = new  mongoose.Schema({
   createTime:{ type: String },
   content:{type:String},
   Name:{type:String},
-  Iurl:{type:String}
+  Iurl:{type:String},
+  replay:[
+    {
+      name:{type:String},
+      test:{type:String}
+    }
+  ]
 })
 
 const User = mongoose.model('User', UserSchema)
@@ -66,6 +78,7 @@ const Comment = mongoose.model('Comment',commentSchema)
 const Message = mongoose.model('Message',leaveMessageSchema)
 // User.db.dropCollection('users')//删除用户数据
 // Article.db.dropCollection('articles')
-// Message.db.dropCollection('message')
-
-module.exports = { User , Article , Sort , Labels ,Comment, Message}
+// Sort.db.dropCollection('sorts')
+// Message.db.dropCollection('messages')
+//Labels.db.dropCollection('labels')
+module.exports = { User , Article , Sort , Labels ,Comment, Message }

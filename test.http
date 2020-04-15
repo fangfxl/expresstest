@@ -104,11 +104,6 @@ post {{url}}/addLabel
 get {{ url }}/label
 {{ json }}
 
-###查看留言
-
-get {{ url }}/leaveMessage
-{{json}}
-
 ###添加留言
 post {{ url }}/addLM
 {{ json}}
@@ -117,5 +112,31 @@ post {{ url }}/addLM
   "createTime":"2020-04-01 12:02:23",
   "content":"测试111",
   "name":"方晓龙111111",
-  "Iurl":"1"
+  "Iurl":"1",
+  "replay":[
+  ]
 }
+###回复
+put {{url}}/updateLM
+{{json}}
+
+  {"_id":"5e954f8334c7302a4c305a19",
+   "replay":{
+      "name":"方晓龙sss",
+      "test":"回复评论wwwwwwwww"
+    }
+  }
+
+###查看留言
+
+get {{ url }}/leaveMessage
+{{json}}
+
+###删除留言
+delete {{url}}/LeaveMS
+{{json}}
+
+  {
+    "_id":"5e951f58ce12901048401833"
+  }
+ 
