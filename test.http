@@ -104,15 +104,53 @@ post {{url}}/addLabel
 get {{ url }}/label
 {{ json }}
 
+###查看评论
+get {{url}}/Comments
+{{json}}
+
+####发表评论
+
+post {{url}}/Comment
+{{json}}
+
+{
+  "name":"fang1111",
+  "article_id":"1122312312",
+  "time":"2020-02-09",
+  "content":"测试评论111",
+  "isShow":false,
+  "replay":[]
+}
+
+###回复评论
+put {{url}}/replayComment
+{{json}}
+
+{
+  "_id":"5e96bf5a9aa4fa3e54b97d94",
+   "replay":{
+      "name":"方晓s111s",
+      "replayTime":"2020-01-10",
+      "content":"第2条回复",
+      "parentName":"方1",
+      "isShow":"false"
+    }
+}
+
+
+
+
+
 ###添加留言
 post {{ url }}/addLM
 {{ json}}
 
 {
   "createTime":"2020-04-01 12:02:23",
-  "content":"测试111",
-  "name":"方晓龙111111",
+  "content":"皓哥，网站证书昨天过期啦~~~“此服务器无法证明它是 coolshell.cn；其安全证书已在昨天过期。出现此问题的原因可能是配置有误，或有攻击者拦截了您的连接。计算机的时钟目前已设为 2018年5月24日星期四，该设置是否正确？如果不正确，请更正系统的时钟，然后刷新此页面。",
+  "name":"方晓龙3",
   "Iurl":"1",
+  "isShow":false,
   "replay":[
   ]
 }
@@ -120,10 +158,14 @@ post {{ url }}/addLM
 put {{url}}/updateLM
 {{json}}
 
-  {"_id":"5e954f8334c7302a4c305a19",
+  {"_id":"5e96aea4b0e29a1eac6c3919",
    "replay":{
-      "name":"方晓龙sss",
-      "test":"回复评论wwwwwwwww"
+      "name":"方晓ss",
+      "replayTime":"2020-01-10",
+      "Iurl":"www.baidu.com",
+      "content":"第2条回复",
+      "parentName":"方1",
+       "isShow":"false"
     }
   }
 
@@ -140,3 +182,5 @@ delete {{url}}/LeaveMS
     "_id":"5e951f58ce12901048401833"
   }
  
+ 
+

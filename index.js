@@ -240,8 +240,31 @@ app.put('/api/updateLabel', async (req, res) => {
  * description
  * 评论
  */
-
-
+app.get('/api/Comments', async (req, res) => {
+  const Comments = await Comment.find()
+  res.send(Comments)
+})
+//发表评论
+app.post('/api/Comment', async (req, res) => {
+  const comment = await Comment.create({
+    username: req.body.name,
+    article_id:req.body.article_id,
+    time: req.body.time,
+    content: req.body.content,
+    isShow:req.body.isShow,
+    replay: req.body.replay
+  })
+  res.send(comment)
+})
+//回复评论
+app.put('/api/replayComment', async (req, res) => {
+  const replayComment = await Comment.findByIdAndUpdate(req.body._id, {
+    $push: {
+      "replay": req.body.replay
+    }
+  })
+  res.send(replayComment)
+})
 
 /**
  * description
@@ -266,6 +289,7 @@ app.post('/api/addLM', async (req, res) => {
     content: req.body.content,
     Name: req.body.name,
     Iurl: req.body.Iurl,
+    isShow:req.body.isShow,
     replay: req.body.replay
   })
   res.send(message)

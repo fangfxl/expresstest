@@ -46,13 +46,16 @@ const labelSchema = new mongoose.Schema({
 const commentSchema = new mongoose.Schema({
   username:{type:String},
   article_id:{type:String},
-  comment_like_count:{type:Number},
   time:{type:Date},
+  isShow:{type:Boolean},
   content:{type:String},
   replay:[
     {
       name:{type:String},
-      test:{type:String}
+      replayTime:{type:String},
+      content:{type:String},
+      isShow:{type:Boolean},
+      parentName:{type:String}
     }
   ]
 })
@@ -62,10 +65,15 @@ const leaveMessageSchema = new  mongoose.Schema({
   content:{type:String},
   Name:{type:String},
   Iurl:{type:String},
+  isShow:{type:Boolean},
   replay:[
     {
       name:{type:String},
-      test:{type:String}
+      replayTime:{type:String},
+      Iurl:{type:String},
+      content:{type:String},
+      parentName:{type:String},
+      isShow:{type:Boolean},
     }
   ]
 })
