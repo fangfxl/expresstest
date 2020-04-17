@@ -46,7 +46,7 @@ const labelSchema = new mongoose.Schema({
 const commentSchema = new mongoose.Schema({
   username:{type:String},
   article_id:{type:String},
-  time:{type:Date},
+  time:{type:String},
   isShow:{type:Boolean},
   content:{type:String},
   replay:[
@@ -89,4 +89,5 @@ const Message = mongoose.model('Message',leaveMessageSchema)
 // Sort.db.dropCollection('sorts')
 // Message.db.dropCollection('messages')
 //Labels.db.dropCollection('labels')
+  // Comment.db.dropCollection('comments')
 module.exports = { User , Article , Sort , Labels ,Comment, Message }

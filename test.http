@@ -39,21 +39,21 @@ post {{url}}/articleDetails
 get {{url}}/profile
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNjY1N2RkOGY1YzJkMTRiOGMyYjU0NSIsImlhdCI6MTU4Mzc2Njc2NX0.1I9maXvWTuXMMVJ2tp_yez-qXmYh_kFR0LVw9gdYWFY
 
+
 ###添加文章
 post {{url}}/addArticle
 {{json}}
 
 {
-    "title": "方晓龙测试1",
-    "content": "018年末，回首今年，感觉整个圈子的气氛是惨不忍睹的。昔日的大佬，昔日的老板大土豪，在这个寒冬渐渐的败落。有些人在死撑自己的信誉，苦死也撑着，这些人是我所以尊重、仰慕、崇拜的。然而也些人不是，借着这个寒冬，他们打破了底线，当起了老赖（这里没有双引号，是真正的老赖）。
-              2018",
+    "title": "测试12",
+    "content": "018年末，回首今年，感觉整个圈子的气氛是惨不忍睹的。昔日的大佬，昔日的老板大土豪，在这个寒冬渐渐的败落。有些人在死撑自己的信誉，苦死也撑着，这些人是我所以尊重、仰慕、崇拜的。然而也些人不是，借着这个寒冬，他们打破了底线，当起了老赖（这里没有双引号，是真正的老赖）。",
     "image": "show3.jpg",
     "time": "2020-3-22 10:10:59",
-    "author":" 作者",
-    "views":" 1222",
-    "comment_count":"231",
-    "sort_id": "qqqwq",
-    "label_id":"qweqw2"
+    "author":"龙哥",
+    "views":"12",
+    "count":"231",
+    "sort": "qqqwq",
+    "label":"qweqw2"
 }
 
 ###查询文章列表
@@ -73,6 +73,7 @@ put {{url}}/updateArticle
       "time": "2020-02-05",
       "author":" 作者2222223",
       "views":" 1232",
+      "count":"",
       "comment_count":"2323231",
       "sort_id": "2321",
       "label_id":"2322"
@@ -127,7 +128,7 @@ put {{url}}/replayComment
 {{json}}
 
 {
-  "_id":"5e96bf5a9aa4fa3e54b97d94",
+  "_id":"5e97f7b870cc5d3cb043dadb",
    "replay":{
       "name":"方晓s111s",
       "replayTime":"2020-01-10",
